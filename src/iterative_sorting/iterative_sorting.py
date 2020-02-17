@@ -53,6 +53,6 @@ def count_sort( arr, maximum=-1 ):
 
     return arr
 
-lis = [1,4,1,2,7,5,2]
-print("Before count sort:", list(lis))
-print("After count sort:", list(count_sort(lis, 9)))
+# lis = [1,4,1,2,7,5,2]
+# print("Before count sort:", list(lis))
+# print("After count sort:", list(count_sort(lis, 9)))
