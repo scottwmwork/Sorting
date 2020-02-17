@@ -26,6 +26,33 @@ def bubble_sort( arr ):
 
 
 # STRETCH: implement the Count Sort function below
-def count_sort( arr, maimum=-1 ):
+def count_sort( arr, maximum=-1 ):
+
+    # Create array 
+    count = []
+    for _ in range(0, maximum):
+        count.append(0)
+
+    # Count occurences and add in new array
+    for num in arr:
+        count[num] = count[num] + 1
+
+    # Add array elements
+    for index in range(0,len(count) - 1):
+        count[index + 1] = count[index] + count[index + 1]
+
+    # Create new array with same length as original array
+    sorted = []
+    for _ in range(len(arr)):
+        sorted.append(0)
+
+    for num in arr:
+        
+        sorted[count[num]] = num
+        count[num] = count[num] - 1
 
     return arr
+
+lis = [1,4,1,2,7,5,2]
+print("Before count sort:", list(lis))
+print("After count sort:", list(count_sort(lis, 9)))
