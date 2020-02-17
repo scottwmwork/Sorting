@@ -29,7 +29,3 @@ def bubble_sort( arr ):
 def count_sort( arr, maimum=-1 ):
 
     return arr
-
-lis = [9,2,4,5,1]
-print("Before sorted:", list(lis))
-print("After sored:", list(selection_sort(lis)))
