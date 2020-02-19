@@ -10,15 +10,12 @@ def merge(arrA, arrB):
     
     for i in range(0, elements):
         
-        if i == len(arrA):
-            print(arrA, arrB)
-            merged_arr[i] = arrB[b - 1]
-            print(merged_arr)
+        if a >= len(arrA):
+            merged_arr[i] = arrB[b]
             break
 
-        if i == len(arrB):
-            print(i)
-            merged_arr[i] = arrA[a - 1]
+        if b >= len(arrB):
+            merged_arr[i] = arrA[a]
             break
 
         if arrA[a] <= arrB[b]:
@@ -39,7 +36,6 @@ def merge_sort(arr):
 
     # Base Case 
     if len(arr) == 1 or len(arr) == 0:
-        print(arr)
         return arr
 
     # Split
