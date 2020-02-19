@@ -1,31 +1,19 @@
 # TO-DO: complete the helpe function below to merge 2 sorted arrays
 def merge(arrA, arrB):
-    elements = len( arrA ) + len( arrB )
-    merged_arr = [0] * elements
 
-    
-    # TO-DO
-    a = 0 # index of arrA
-    b = 0 # index of arrB
-    
-    for i in range(0, elements):
-        
-        if a >= len(arrA):
-            merged_arr[i] = arrB[b]
-            break
-
-        if b >= len(arrB):
-            merged_arr[i] = arrA[a]
-            break
-
-        if arrA[a] <= arrB[b]:
-            merged_arr[i] = arrA[a]
+    a = 0
+    b = 0
+    merged_arr = []
+    while a < len(arrA) and b < len(arrB):
+        if arrA[a] < arrB[b]:
+            merged_arr.append(arrA[a])
             a += 1
-            
         else:
-            merged_arr[i] = arrB[b]
+            merged_arr.append(arrB[b])
             b += 1
-            
+
+    merged_arr += arrA[a:]
+    merged_arr += arrB[b:]
     return merged_arr
 
 
@@ -63,4 +51,7 @@ def merge_sort_in_place(arr, l, r):
 def timsort( arr ):
 
     return arr
+
+
+merge_sort([3,1,5,2,6,9,7])
 
