@@ -4,13 +4,13 @@ from recursive_sorting import *
 
 class RecursiveSortingTests(unittest.TestCase):
     def test_merge_sort(self):
-        arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+        arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7,10]
         arr2 = []
         arr3 = [2]
         arr4 = [0, 1, 2, 3, 4, 5]
         arr5 = random.sample(range(200), 50)
 
-        self.assertEqual(merge_sort(arr1), [0,1,2,3,4,5,6,7,8,9])
+        self.assertEqual(merge_sort(arr1), [0,1,2,3,4,5,6,7,8,9,10])
         self.assertEqual(merge_sort(arr2), [])
         self.assertEqual(merge_sort(arr3), [2])
         self.assertEqual(merge_sort(arr4), [0,1,2,3,4,5])
